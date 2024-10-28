@@ -16,9 +16,11 @@ izvorna koda dokumenta veljaven in urejen CSS.
    glavnega naslova.
 
  * * *  * * *  * * *  * * *  * * */
+
 img{
     max-width: 40em;
     height: auto;
+    margin-bottom: 1em;
 
 }
 body {
@@ -30,13 +32,16 @@ body {
 }
 
 .hec {
-    margin: 1 auto;
+    margin: auto;
     text-align: center;
     width: 70%;
     background-color: rgb(239, 32, 66);
     color: white;
     padding: 0.5em;
     font-size: 1.7em;
+}
+div{
+    text-align: center;
 }
 
 blockquote {
@@ -46,8 +51,9 @@ blockquote {
     margin-right: 2em;
     padding: 1em;
     background-color:  rgb(51, 81, 126, 0.2);
-    border-left: rgb(51, 81, 126);
+    border-color: rgb(51, 81, 126);
     border-width: 1px;
+    border-style: solid;
 }
 blockquote p {
     font-style: italic;
@@ -68,4 +74,9 @@ dl dt {
     font-weight: bold;
     float: left;
     margin-right: 1em;
+    margin-bottom: 1em;
+}
+dl dd {
+    text-align: justify;
+    margin-bottom: 1em;
 }
