@@ -19,3 +19,8 @@ thumbs.db
 
 # Python
 __pycache__
+
+.dvi
+.nav
+.synctex
+.snm
