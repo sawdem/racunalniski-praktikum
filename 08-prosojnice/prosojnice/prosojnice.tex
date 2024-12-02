@@ -7,6 +7,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage[slovene]{babel}
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{array}
+\usepgfplotslibrary{external}
+\usetikzlibrary{math}
 % Naloga 1.3.3: definirajte okolji `definicija' in `izrek'.
 % Namig: z iskanjem po datotekah (Ctrl+Shift+F oz. Cmd+Shift+F) 
 % poiščite niz `{definicija}' ali niz `{izrek}'.
@@ -53,15 +59,15 @@
 \tableofcontents%[pausesections]
 \end{frame}
 \section{Paket \texttt{beamer}}
-\input{prosojnice/1-paket-beamer.tex}
+\input{1-paket-beamer.tex}
 \section{Paketa \texttt{amsmath} in \texttt{amsfonts}}
-\input{prosojnice/2-paketa-amsmath-amsfonts.tex}
+\input{2-paketa-amsmath-amsfonts.tex}
 \section[Matematika, 1. del\\\large{Analiza, logika, množice}]{Matematika, 1. del}
 
 \section{Stolpci in slike}
-
+\input{prosojnice2/4-stolpci-slike.tex}
 \section{Paket \texttt{beamer} in tabele}
+\input{prosojnice2/5-beamer-tabele.tex}
 
 \section[Matematika, 2. del\\\large{Zaporedja, algebra, grupe}]{Matematika, 2. del}
-
 \end{document}
