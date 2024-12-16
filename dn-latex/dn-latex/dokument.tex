@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{biblatex}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\addbibresource{knjiga.bib}
+
+\title{Brownovo gibanje}
+\author{Matej Rojec}
+\date{}
+
+\newtheorem{definition}{Definicija}
+\newtheorem{theorem}{Izrek}
+
+\begin{document}
+\maketitle
+\paragraph{}
+Brownovo gibanje (več v \cite{karatzas1991brownian}) je intuitivno slučajen proces, % Sklic na knjigo
+ki predstavlja naključno gibanje delcev v mediju.
+
+\renewcommand{\figurename}{Slika}
+% Slika: PerrinPlot2.pdf
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=60mm]{PerrinPlot2.pdf}
+         \caption{Reprodukcija slike iz Jean Baptiste Perrin, \emph{Mouvement brownien et réalité moléculaire}, Ann. de Chimie et de Physique (VIII) 18, 5-114, 1909}
+       \end{figure}
+
+    % Začetek definicije
+   \begin{definition}
+     \normalfont Standardno Brownovo gibanje $\{B_t\}_{t \geq 0}$ je slučajen proces z naslednjimi lastnostmi: 
+         \begin{enumerate}
+            \item $B_0 = 0$.
+            \item Prirastki $B_{t_n} - B_{t_{n-1}}, B_{t_{n-1}} - B_{t_{n-2}}, \ldots, B_2 - B_1, B_1 - B_0$ so neodvisne slučajne spremenljivke, za vsak $t_0 \leq t_1 \leq \cdots \leq t_{n-1} \leq t_n$.
+            \item Za vsak $t \geq 0$ in $h > 0$ velja $B_{t+h} - B_t \sim \mathcal{N}(0, h)$.
+            \item Funkcija $t \mapsto B_t$ je zvezna skoraj gotovo.
+         \end{enumerate}
+   \end{definition}
+    % Konec definicije
+    
+    Preden zapišemo izrek, definirajmo še pojem časa ustavljanja.
+    
+    % Začetek definicije
+   \begin{definition}
+     \normalfont Slučajna spremenljivka $\tau$ na verjetnostnem prostoru ($\Omega, \mathcal{F}, P$) z vrednostmi v %$\mathbb{"R"}$
+     je \emph{čas ustavljanja} glede na filtracijo ??, če velja ??.
+   \end{definition}
+    % Konec definicije
+    
+    Zdaj lahko zapišemo izrek. % Sklic na izrek z oznako thm:stopped_brownian
+    
+    % Začetek izreka
+    \begin{theorem}
+      \normalfont Naj bo $\{B_t\}_{t \geq 0}$ (standardno) Brownovo gibanje, $\tau$ čas ustavljanja glede na 
+      $\{\mathcal{F}_t\}_{t \geq 0}$ in naj velja \boldmath{P}$[\tau<\infty]$.
+      Potem je tudi proces:
+      \[
+      \hat{B} := \{B_{T+t} - B_T \mid t \geq 0\}
+      \]
+      (standardno) Brownovo gibanje in neodvisen od $\mathcal{F}_T$.
+    \end{theorem}
+    % Konec izreka
+    \printbibliography[title={Literatura}]
+\end{document}
